@@ -32,12 +32,12 @@ public class Supermarket {
     }
 
     public Product updateProduct(long barcode, double price) {
-        for (int i = 0; i < products.length; i++) {
-            if (products[i] != null && products[i].getBarcode() == barcode) {
-                products[i].setPrice(price);
-            }
+        Product product = findProduct(barcode);
+        if(product == null){
+            return null;
         }
-        return null;
+        product.setPrice(price);
+        return product;
     }
 
     public boolean removeProduct(long barcode) {
@@ -49,6 +49,7 @@ public class Supermarket {
                 products[quantity - 1] = null;
                 quantity--;
                 System.out.println("===Product " +"'"+ temp.getName() + "'"+" was removed===");
+                return true;
             }
         }
         return false;

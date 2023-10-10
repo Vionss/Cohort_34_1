@@ -10,11 +10,11 @@ public class MinMaxValues {
 Если аргументы содержат неправильный тип, приложение должно вывести сообщение: Wrong type
              */
 
-        System.out.println(minMaxValues(args));
+       minMaxValues(args);
 
     }
 
-    public static String minMaxValues(String[] str) {
+    public static void  minMaxValues(String[] str) {
 
         if (str.length == 0) {
             System.out.println("Byte: " + Byte.MIN_VALUE + " / " + Byte.MAX_VALUE + "; " + "Integer: " + Integer.MIN_VALUE + " / " + Integer.MAX_VALUE + "; " +
@@ -52,6 +52,5 @@ public class MinMaxValues {
                     break;
             }
         }
-        return "";
     }
 }

@@ -61,7 +61,7 @@ public class User {
         if (isPasswordValid(password)) {
             this.password = password;
         } else {
-            System.out.println(password + " invalid");
+            System.out.println("Password invalid");
         }
     }
 

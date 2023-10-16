@@ -26,6 +26,8 @@ public class FigureAppl {
 
         System.out.println(totalPerimeter(shapes));
 
+        System.out.println(totalAreaOfCircles(shapes));
+
 
     }
 
@@ -45,4 +47,14 @@ public class FigureAppl {
         return "Total perimeter = " + sum;
     }
 
+    public static String totalAreaOfCircles(Shape[] shapes){
+        double sum = 0;
+        for (int i = 0; i <shapes.length; i++) {
+            if(shapes[i] instanceof Circle){
+                Shape circle = (Circle) shapes[i];
+                sum += circle.calcArea();
+            }
+        }
+        return "Total area of circles is: " + sum;
+    }
 }

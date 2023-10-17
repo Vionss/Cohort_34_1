@@ -13,7 +13,7 @@ public class Square extends Shape{
 
     @Override
     public double calcPerimeter() {
-        double perimeter = side * 4;
+        double perimeter = side * side;
         return perimeter;
     }
 }

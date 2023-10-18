@@ -30,6 +30,7 @@ public class CompanyImpl implements Company{
               employees[i] = employees[size -1];
               employees[size -1] = null;
               size--;
+              break;
             }
         }
         return temp;
@@ -49,9 +50,7 @@ public class CompanyImpl implements Company{
     public double totalSalary() {
         double sum = 0;
         for (int i = 0; i < size; i++) {
-            if (employees[i] != null) {
                 sum += employees[i].calcSalary();
-            }
         }
         return sum;
     }

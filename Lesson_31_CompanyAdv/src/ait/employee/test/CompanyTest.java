@@ -26,6 +26,7 @@ class CompanyTest {
         for (int i = 0; i < firm.length; i++) {
             company.addEmployee(firm[i]);
         }
+
     }
 
     @org.junit.jupiter.api.Test

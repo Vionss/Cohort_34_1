@@ -26,7 +26,7 @@ public class GarageImpl implements Garage {
     public Car removeCar(String regNumber) {
         Car temp = null;
         for (int i = 0; i < size; i++) {
-            if (cars[i] == findCarByRegNumber(regNumber)) {
+            if(cars[i].getRegNumber() == regNumber) {
                 temp = cars[i];
                 cars[i] = cars[--size];
                 cars[size] = null;

@@ -59,7 +59,7 @@ public class ArrayTools {
     public static <T>  void OddEvenComparator(T[] arr, Comparator<T> comparator){
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
-                if(comparator.compare(arr[j], arr[j + 1]) % 2 == 0){
+                if(comparator.compare(arr[j], arr[j + 1]) > 0){
                     T t = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = t;
@@ -67,5 +67,6 @@ public class ArrayTools {
             }
         }
     }
+
 
 }

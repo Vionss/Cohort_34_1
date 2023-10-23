@@ -4,6 +4,7 @@ import ait.arrays.util.ArrayTools;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
@@ -65,6 +66,23 @@ class ArrayToolsTest {
     /*
     Напишите OddEvenComparator, реализующий Comparator с методом сравнения для сортировки массива целых чисел в следующем порядке: Четные целые числа должны идти перед нечетными числами.
      */
+    @Test
+    void testOddEvenComparator(){
+        System.out.println("=== testOddEvenComparator ===");
 
-
+        ArrayTools.OddEvenComparator(arrNum, (n1, n2) -> {
+            if (n1 % 2 == 0 && n2 % 2 == 0) {
+                return n1 - n2; // Четні числа за зростанням
+            } else if (n1 % 2 != 0 && n2 % 2 != 0) {
+                return n2 - n1; // Нечетні числа за спаданням
+            } else {
+                if (n1 % 2 == 0) {
+                    return -1; // n1 (ченте) перед n2 (нечете)
+                } else {
+                    return 1; // n2 (нечете) перед n1 (четне)
+                }
+            }
+        });
+        ArrayTools.printArray(arrNum);
+    }
 }

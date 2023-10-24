@@ -72,14 +72,14 @@ class ArrayToolsTest {
 
         ArrayTools.OddEvenComparator(arrNum, (n1, n2) -> {
             if (n1 % 2 == 0 && n2 % 2 == 0) {
-                return n1 - n2; // Четні числа за зростанням
+                return n1 - n2;
             } else if (n1 % 2 != 0 && n2 % 2 != 0) {
-                return n2 - n1; // Нечетні числа за спаданням
+                return n2 - n1;
             } else {
                 if (n1 % 2 == 0) {
-                    return -1; // n1 (ченте) перед n2 (нечете)
+                    return -1;
                 } else {
-                    return 1; // n2 (нечете) перед n1 (четне)
+                    return 1;
                 }
             }
         });

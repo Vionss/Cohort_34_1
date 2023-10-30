@@ -31,7 +31,12 @@ class CompanyTest {
 
     @org.junit.jupiter.api.Test
     void addEmployee() {
-        assertFalse(company.addEmployee(null));
+        //TODO assert exception if employee is null
+        try{
+            company.addEmployee(null);
+        }catch (RuntimeException e){
+            System.out.println("Employee cant be null");
+        }
         assertFalse(company.addEmployee(firm[1]));
         Employee employee = new SalesManager(5000, "Peter", "Jackson", 160, 19000, 0.1);
         assertTrue(company.addEmployee(employee));

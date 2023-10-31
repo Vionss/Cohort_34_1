@@ -15,7 +15,7 @@ public class CompanyImpl implements Company {
     public boolean addEmployee(Employee employee) {
         // TODO  throw RuntimeException if employee == null
         if (employee == null) {
-            throw new RuntimeException();
+            throw new RuntimeException("Employee cant be null");
         }
         if( size == employees.length || findEmployee(employee.getId()) != null) {
             return false;

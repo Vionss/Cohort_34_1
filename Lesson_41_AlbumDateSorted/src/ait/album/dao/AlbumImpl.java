@@ -14,7 +14,6 @@ public class AlbumImpl implements Album {
 
 
     public AlbumImpl(int capacity) {
-
         this.photos = new Photo[capacity];
     }
 

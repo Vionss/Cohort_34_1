@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lesson_48_Collections/Citizens/Citizens.iml" filepath="$PROJECT_DIR$/Lesson_48_Collections/Citizens/Citizens.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cohort_34-1.iml" filepath="$PROJECT_DIR$/Cohort_34-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_47_List/CompanyList/CompanyList.iml" filepath="$PROJECT_DIR$/Lesson_47_List/CompanyList/CompanyList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_38_Enum/Exeption/Exeption.iml" filepath="$PROJECT_DIR$/Lesson_38_Enum/Exeption/Exeption.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_41_AlbumDateSorted/HomeWork_41_Forum/HomeWork_41_Forum.iml" filepath="$PROJECT_DIR$/Lesson_41_AlbumDateSorted/HomeWork_41_Forum/HomeWork_41_Forum.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_42/HomeWork_42_Fibonacci/HomeWork_42_Fibonacci.iml" filepath="$PROJECT_DIR$/Lesson_42/HomeWork_42_Fibonacci/HomeWork_42_Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_47_List/HomeWork_47/HomeWork_47.iml" filepath="$PROJECT_DIR$/Lesson_47_List/HomeWork_47/HomeWork_47.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_29_Employee/Homework_29/Homework_29.iml" filepath="$PROJECT_DIR$/Lesson_29_Employee/Homework_29/Homework_29.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_32_Generic/Homework_32/Homework_32.iml" filepath="$PROJECT_DIR$/Lesson_32_Generic/Homework_32/Homework_32.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_26_UserTest/Lesson_26_UserTest.iml" filepath="$PROJECT_DIR$/Lesson_26_UserTest/Lesson_26_UserTest.iml" />
@@ -28,6 +31,8 @@
       <module fileurl="file://$PROJECT_DIR$/Lesson_44_ArrayList/Lesson_44_ArrayList.iml" filepath="$PROJECT_DIR$/Lesson_44_ArrayList/Lesson_44_ArrayList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_45_Tasks/Lesson_45_Tasks.iml" filepath="$PROJECT_DIR$/Lesson_45_Tasks/Lesson_45_Tasks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson_46_LinkedList/Lesson_46_LinkedList.iml" filepath="$PROJECT_DIR$/Lesson_46_LinkedList/Lesson_46_LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_47_List/Lesson_47_List.iml" filepath="$PROJECT_DIR$/Lesson_47_List/Lesson_47_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_48_Collections/Lesson_48_Collections.iml" filepath="$PROJECT_DIR$/Lesson_48_Collections/Lesson_48_Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_21/lesson_21.iml" filepath="$PROJECT_DIR$/lesson_21/lesson_21.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_22/lesson_22.iml" filepath="$PROJECT_DIR$/lesson_22/lesson_22.iml" />
       <module fileurl="file://$PROJECT_DIR$/lesson_23_SuperMarket/lesson_23_SuperMarket.iml" filepath="$PROJECT_DIR$/lesson_23_SuperMarket/lesson_23_SuperMarket.iml" />

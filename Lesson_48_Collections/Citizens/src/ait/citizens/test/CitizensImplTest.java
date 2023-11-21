@@ -77,7 +77,11 @@ class CitizensImplTest {
 
     @org.junit.jupiter.api.Test
     void findByLastName() {
-        // TODO
+        Iterable<Person> actual = citizens.find("L3");
+        Iterable<Person> expected = List.of(
+                new Person(3, "F3", "L3", LocalDate.now().minusYears(33))
+        );
+        assertIterableEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
@@ -95,7 +99,12 @@ class CitizensImplTest {
 
     @org.junit.jupiter.api.Test
     void getAllPersonsByAge() {
-        fail("To Do");
+        Iterable<Person> res = citizens.getAllPersonsByAge();
+        int age = -1;
+        for (Person person : res) {
+            assertTrue(person.getAge() >= age);
+            age = person.getAge();
+        }
     }
 
     @org.junit.jupiter.api.Test

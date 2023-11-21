@@ -5,11 +5,15 @@ import ait.citizens.model.Person;
 import java.time.LocalDate;
 import java.util.*;
 
-public class CitizensImpl implements Citizens{
+public class CitizensImpl implements Citizens {
     private List<Person> idList;
     private List<Person> lastNameList;
     private List<Person> ageList;
-    private static Comparator<Person> lastNameComparator = (p1,p2) -> p1.getLastName().compareTo(p2.getLastName());
+    private static Comparator<Person> lastNameComparator = (p1, p2) -> {
+        int res = p1.getLastName().compareTo(p2.getLastName());
+        return res != 0 ? res : Integer.compare(p1.getId(), p2.getId());
+    };
+
     private static Comparator<Person> ageComparator = (p1, p2) ->{
         int res = Integer.compare(p1.getAge(), p2.getAge());
         return res != 0 ? res : Integer.compare(p1.getId(), p2.getId());
@@ -45,6 +49,7 @@ public class CitizensImpl implements Citizens{
         return true;
     }
 
+    // O(n)
     @Override
     public boolean remove(int id) {
         Person victim = find(id);
@@ -70,15 +75,18 @@ public class CitizensImpl implements Citizens{
         LocalDate now = LocalDate.now();
         Person pattern = new Person(Integer.MIN_VALUE, null,null, now.minusYears(minAge));
         int from = -Collections.binarySearch(ageList, pattern, ageComparator) - 1;
-        pattern = new Person(Integer.MAX_VALUE, null,null, now.plusYears(maxAge));
+        pattern = new Person(Integer.MAX_VALUE, null,null, now.minusYears(maxAge));
         int to = -Collections.binarySearch(ageList, pattern, ageComparator) - 1;
         return ageList.subList(from,to);
     }
 
     @Override
     public Iterable<Person> find(String lastName) {
-        // TODO
-        return null;
+        Person pattern = new Person(Integer.MIN_VALUE, null,lastName, null);
+        int from = -Collections.binarySearch(lastNameList, pattern, lastNameComparator) - 1;
+        pattern = new Person(Integer.MAX_VALUE, null,lastName, null);
+        int to = -Collections.binarySearch(lastNameList, pattern, lastNameComparator) - 1;
+        return lastNameList.subList(from,to);
     }
 
     @Override
@@ -96,6 +104,7 @@ public class CitizensImpl implements Citizens{
         return lastNameList;
     }
 
+    // O(
     @Override
     public int size() {
         return idList.size();

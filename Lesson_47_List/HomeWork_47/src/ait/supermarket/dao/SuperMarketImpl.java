@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class SuperMarketImpl implements Supermarket {
     private Collection<Product> products = new ArrayList<>();
@@ -34,12 +35,10 @@ public class SuperMarketImpl implements Supermarket {
 
     @Override
     public Product findByBarCode(long barCode) {
-        for (Product product : products) {
-            if (barCode == product.getBarCode()) {
-                return product;
-            }
-        }
-        return null;
+        return products.stream()
+                .filter(p -> p.getBarCode() == barCode)
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
@@ -59,13 +58,9 @@ public class SuperMarketImpl implements Supermarket {
     }
 
     public Iterable<Product> findByPredicate(Predicate<Product> predicate) {
-        List<Product> res = new ArrayList<>();
-        for (Product product : products) {
-            if (predicate.test(product)) {
-                res.add(product);
-            }
-        }
-        return res;
+        return products.stream()
+                .filter(predicate)
+                .collect(Collectors.toList());
     }
 
     @Override

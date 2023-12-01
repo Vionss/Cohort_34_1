@@ -2,6 +2,7 @@ package ait.citizens.test;
 
 import ait.citizens.dao.Citizens;
 import ait.citizens.dao.CitizensImpl;
+import ait.citizens.dao.CitizensSetImpl;
 import ait.citizens.model.Person;
 
 import java.time.LocalDate;
@@ -18,7 +19,7 @@ class CitizensImplTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        citizens = new CitizensImpl();
+        citizens = new CitizensSetImpl();
         Person p1 = new Person(1, "F1", "L1", LocalDate.now().minusYears(31));
         Person p2 = new Person(2, "F2", "L2", LocalDate.now().minusYears(32));
         Person p3 = new Person(3, "F3", "L3", LocalDate.now().minusYears(33));

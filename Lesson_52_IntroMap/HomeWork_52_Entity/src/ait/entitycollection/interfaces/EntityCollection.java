@@ -1,0 +1,7 @@
+package ait.entitycollection.interfaces;
+
+public interface EntityCollection {
+    public void add(Entity entity);
+
+    public Entity removeMaxValue();
+}
